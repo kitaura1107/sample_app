@@ -1,0 +1,14 @@
+<h1>商品編集</h1>
+
+<%= form_with(model: @product, local: true) do |form| %>
+  <h4>商品名</h4>
+  <%= form.text_field :name %>
+
+  <h4>商品説明</h4>
+  <%= form.text_area :description %>
+
+  <h4>価格</h4>
+  <%= form.number_field :price %>
+
+  <%= form.submit "更新" %>
+<% end %>
