@@ -22,4 +22,6 @@ test:
 
 production:
   <<: *default
-  database: storage/production.sqlite3
+  adapter: postgresql # PostgreSQLに変更
+  encoding: unicode #  # エンコーディング設定 追加
+  pool: 5 # 接続数設定 追加
